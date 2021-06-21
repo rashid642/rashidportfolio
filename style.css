@@ -1,0 +1,127 @@
+/* css reset */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: black;
+}
+/* CSS variables */
+:root{
+    --navbar_height:50px;
+}
+/* Navigation Bar */
+#navbar {
+    display: flex;
+    align-items: center;
+    /* position: relative; */
+}
+/* In CSS, ::before creates a pseudo-element
+ that is the first child of the selected element. 
+ It is often used to add cosmetic content to an 
+ element with the content property. It is inline by default */
+
+
+ /* An inline block is placed inline (ie. on the same line
+  as adjacent content), but it behaves as a block. */
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    height: 20%;
+    width: 100%;
+    z-index: -1;
+    /* opacity: 0.4; */
+}
+/* logo and image */
+#logo {
+    margin: 2px 2px;
+}
+#logo img {
+    margin: 5px 5px;
+    height: 35px;
+}
+/* list styling */
+#navbar ul{
+    display: flex;
+}
+#navbar ul li{
+    
+    list-style: none;
+    font-size: 1.3rem;
+
+}
+#navbar ul li button{
+    color: white;
+    background-color: black;
+    display: block;
+    padding: 8px 39px;
+    border-radius: 20px;
+    text-decoration: none;
+    margin: 0px 20px
+    /* display: block means that the element */
+     /* is displayed as a block, as paragraphs and headers have */
+     /* always been. A block has some whitespace above and below  */
+     /* it and tolerates no HTML elements next to it, except when  */
+     /* ordered otherwise (by adding a float declaration to another element, for instance). */
+     
+     /*  text-decoration: remove underline */
+
+}
+#navbar ul li :hover{
+    color:black;
+    background-color: white;
+}
+
+/* Home section */
+#home{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 100px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 400px;
+}
+#home::before {
+    content: "";
+    background: url(./nebula.jpg) no-repeat center;
+    /* background-repeat: no-repeat; */
+    position: absolute;
+    margin-top: 200px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    /* opacity: 0.4; */
+}
+.main{
+    color: white;
+    border: 2px solid white;
+    /* background-color: black; */
+    /* opacity: 0.5; */
+    text-align: center;
+    padding: 36px;
+    margin: 200px;
+
+}
+.text {
+    padding: 5px;
+    font-size: 20px;
+}
+.submit {
+    border-radius: 10px;
+    margin: 5px;
+    width: 300px;
+    height: 35px;
+}
+.texthead{
+    font-size:25px;
+    color: red ;
+}
+#subbut :hover{
+    background-color: red;
+    color: white;
+}
+p{
+    text-align: center;
+}
